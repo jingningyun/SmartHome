@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@drawable/login_frame_bg">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/device_spotlight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="射灯"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/main_device_text"
+        app:layout_constraintBottom_toTopOf="@id/tvStatus"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="80%"
+        android:textColor="@color/text_color_b3"
+        android:textSize="@dimen/main_device_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ivIcon" />
+
+    <com.jk184.smarthome.common.view.seekbar.VerticalSeekBarWrapper
+        android:id="@+id/vsbwBrightness"
+        android:layout_width="27dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.jk184.smarthome.common.view.seekbar.VerticalSeekBar
+            android:id="@+id/vsbBrightness"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="100"
+            android:progress="80"
+            android:splitTrack="false"
+            android:thumb="@drawable/dr_seekbar_thumb"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jk184.smarthome.common.view.seekbar.VerticalSeekBarWrapper>
+
+</android.support.constraint.ConstraintLayout>

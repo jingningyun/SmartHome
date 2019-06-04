@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SmartHome</string>
+    <string name="agreement">已阅读并同意&#060;用户协议&#062;&#060;隐私政策&#062;</string>
+</resources>

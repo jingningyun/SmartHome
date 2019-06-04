@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <View
+        android:id="@+id/vFakeStatus"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="2.5dp"
+        android:layout_height="20dp"
+        android:src="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="个人信息"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vFakeStatus" />
+
+    <com.jk184.smarthome.common.view.CircleImageView
+        android:id="@+id/civHead"
+        android:layout_width="94.5dp"
+        android:layout_height="94.5dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/mine_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvEditHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11.5dp"
+        android:text="点击头像修改"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="@id/civHead"
+        app:layout_constraintStart_toStartOf="@id/civHead"
+        app:layout_constraintTop_toBottomOf="@id/civHead" />
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/main_white_bg"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingTop="30dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEditHead">
+
+        <LinearLayout
+            android:id="@+id/llUser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/mine_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="账号"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12345656"
+                android:textColor="@color/hint_color_gray"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <View
+            style="@style/LineStyle"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/llPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/mine_pwd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="密码"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+
+        <View
+            style="@style/LineStyle"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/mine_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="昵称"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小树"
+                android:textColor="@color/hint_color_gray"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <View
+            style="@style/LineStyle"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/mine_gender" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="性别"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/dr_gender_bg_s"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="男"
+                    android:textColor="@drawable/dr_gender_text_s" />
+
+                <RadioButton
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/dr_gender_bg_s"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="女"
+                    android:textColor="@drawable/dr_gender_text_s" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            style="@style/LineStyle"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/mine_birthday" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="生日"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1899-12-03"
+                android:textColor="@color/hint_color_gray"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSave"
+        style="@style/LoginBtnStyle"
+        android:layout_width="0dp"
+        android:layout_marginTop="13dp"
+        android:text="保存"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llInfo"
+        app:layout_constraintWidth_percent="0.65" />
+
+</android.support.constraint.ConstraintLayout>

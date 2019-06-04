@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <View
+        android:id="@+id/vFakeStatus"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jk184.smarthome.common.view.NoScrollViewPager
+        android:id="@+id/vpMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/menu_ll"
+        app:layout_constraintTop_toBottomOf="@id/vFakeStatus" />
+
+    <LinearLayout
+        android:id="@+id/menu_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tab1_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jk184.smarthome.common.view.CheckImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dr_tab_collection_drawable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="收藏"
+                android:layout_marginTop="2dp"
+                android:textColor="@drawable/dr_tab_bottom_text_color"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab2_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jk184.smarthome.common.view.CheckImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dr_tab_home_drawable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="智家"
+                android:layout_marginTop="2dp"
+                android:textColor="@drawable/dr_tab_bottom_text_color"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab3_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jk184.smarthome.common.view.CheckImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dr_tab_device_drawable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="设备"
+                android:layout_marginTop="2dp"
+                android:textColor="@drawable/dr_tab_bottom_text_color"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab4_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jk184.smarthome.common.view.CheckImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dr_tab_trading_area_drawable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_marginTop="2dp"
+                android:text="商圈"
+                android:textColor="@drawable/dr_tab_bottom_text_color"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab5_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jk184.smarthome.common.view.CheckImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dr_tab_mine_drawable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="我的"
+                android:layout_marginTop="2dp"
+                android:textColor="@drawable/dr_tab_bottom_text_color"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

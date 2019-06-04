@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@drawable/login_frame_bg">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="29dp"
+        android:layout_height="32.5dp"
+        android:layout_marginLeft="26.5dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/device_living_music"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客厅音乐"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon"
+        app:layout_constraintBottom_toTopOf="@id/tvMusic"
+        android:textSize="@dimen/main_device_text"
+        android:textColor="@color/text_color"/>
+
+    <TextView
+        android:id="@+id/tvMusic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Safe And Sound - Taylor Swift/The Civil Wars"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginRight="14.5dp"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/cbSwitch"
+        app:layout_constraintEnd_toStartOf="@id/cbSwitch"
+        app:layout_constraintBottom_toBottomOf="@id/cbSwitch"
+        android:textSize="@dimen/main_device_text"
+        android:textColor="@color/text_color_b3"/>
+
+    <CheckBox
+        android:id="@+id/cbSwitch"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:layout_marginRight="14.5dp"
+        android:layout_marginBottom="14.5dp"
+        android:button="@drawable/dr_music_play_bg_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@drawable/login_frame_bg">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="29.5dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="27.5dp"
+        android:src="@drawable/device_lightbelt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="灯带"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/main_device_text"
+        app:layout_constraintBottom_toTopOf="@id/ivOpen"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+
+    <ImageView
+        android:id="@+id/ivOpen"
+        android:layout_width="30.5dp"
+        android:layout_height="30.5dp"
+        android:src="@drawable/curtain_open_1"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginBottom="15.5dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/cbSwitch"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:layout_marginRight="14.5dp"
+        android:layout_marginBottom="14.5dp"
+        android:button="@drawable/dr_switch_bg_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

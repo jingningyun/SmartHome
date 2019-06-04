@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@drawable/login_frame_bg">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="28.5dp"
+        android:layout_marginTop="27.5dp"
+        android:src="@drawable/device_airconditioner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbSwitch"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:button="@drawable/dr_switch_bg_s"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="空调"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/main_device_text"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/tvModel"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+
+    <TextView
+        android:id="@+id/tvModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="冷 中"
+        android:textColor="@color/text_color_b3"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintBottom_toTopOf="@id/ivReduce"/>
+
+    <ImageView
+        android:id="@+id/ivReduce"
+        android:layout_width="30.5dp"
+        android:layout_height="30.5dp"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginBottom="15.5dp"
+        android:src="@drawable/airconditioner_reduce_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19dp"
+        android:text="23℃"
+        android:textColor="@color/text_color_b3"
+        app:layout_constraintEnd_toStartOf="@id/ivPlus"
+        app:layout_constraintStart_toEndOf="@id/ivReduce"
+        app:layout_constraintTop_toTopOf="@id/ivReduce"
+        app:layout_constraintBottom_toBottomOf="@id/ivReduce"/>
+
+    <ImageView
+        android:id="@+id/ivPlus"
+        android:layout_width="30.5dp"
+        android:layout_height="30.5dp"
+        android:layout_marginRight="15.5dp"
+        android:src="@drawable/airconditioner_plus_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivReduce" />
+
+</android.support.constraint.ConstraintLayout>

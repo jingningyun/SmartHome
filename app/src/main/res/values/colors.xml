@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9966</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FF9966</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="main_bg">#F7F7F7</color>
+
+    <color name="style_orange">#FF9966</color>
+    <color name="style_orange_half">#7AFF9966</color>
+
+    <color name="hint_color_gray">#BEBEBE</color>
+    <color name="text_color_gray">#A4A4A4</color>
+
+    <color name="text_color">#252525</color>
+    <color name="text_color_b3">#B3B3B3</color>
+
+
+</resources>

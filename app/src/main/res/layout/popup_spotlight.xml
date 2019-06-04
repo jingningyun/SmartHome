@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="440dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:background="@drawable/login_frame_bg">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="射灯"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSpotlight"
+        android:layout_width="122.5dp"
+        android:layout_height="161.5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/spotlight_close"
+        app:layout_constraintBottom_toTopOf="@id/ivHigh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+    <ImageView
+        android:id="@+id/ivLow"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="46.5dp"
+        android:src="@drawable/spotlight_low"
+        app:layout_constraintBottom_toBottomOf="@id/ivHigh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivHigh" />
+
+    <SeekBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="80"
+        app:layout_constraintBottom_toBottomOf="@id/ivHigh"
+        app:layout_constraintEnd_toStartOf="@id/ivHigh"
+        app:layout_constraintStart_toEndOf="@id/ivLow"
+        app:layout_constraintTop_toTopOf="@id/ivHigh" />
+
+    <ImageView
+        android:id="@+id/ivHigh"
+        android:layout_width="31.5dp"
+        android:layout_height="31.5dp"
+        android:layout_marginRight="46.5dp"
+        android:layout_marginBottom="73.5dp"
+        android:src="@drawable/spotlight_high"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

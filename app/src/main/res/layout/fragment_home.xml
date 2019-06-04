@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/llHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="18.5dp"
+            android:paddingRight="18.5dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:id="@+id/llFloor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvFloor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一楼"
+                    android:textColor="@color/text_color_b3"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="3.5dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/floor_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llweather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textColor="@color/text_color"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="℃"
+                    android:textColor="@color/style_orange"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:id="@+id/tvPM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="优"
+                    android:textColor="@color/text_color"
+                    android:textSize="32dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/stlRoom"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                app:tl_indicator_color="@color/style_orange"
+                app:tl_indicator_corner_radius="3dp"
+                app:tl_indicator_height="6dp"
+                app:tl_indicator_width="6dp"
+                app:tl_textSelectColor="@color/text_color"
+                app:tl_textUnselectColor="@color/text_color_b3"
+                app:tl_textsize="@dimen/text_size" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:overScrollMode="never" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvModel"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:overScrollMode="never" />
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

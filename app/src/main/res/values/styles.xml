@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="LoginEditStyle">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/login_edit_text_size</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColorHint">@color/hint_color_gray</item>
+    </style>
+
+    <style name="LoginBtnStyle">
+        <item name="android:background">@drawable/dr_btn_bg_select</item>
+        <item name="android:textSize">18.5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="LineStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/main_bg</item>
+    </style>
+
+    <style name="EditPwdStyle">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColorHint">@color/hint_color_gray</item>
+        <item name="android:background">@null</item>
+    </style>
+</resources>
